@@ -46,7 +46,7 @@ Feel free to calculate and report values that you find relevant.
 
 ### First Trends Over Time Chart
 
-```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart 1.R")}
+```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("../chart 1.R")}
 ``` 
 
 This chart was made to compare George R. R. Martins "A Song of Ice and Fire" and the TV adaptation "Game of Thrones" to understand the popularity between the two in terms of how often they are checked out throughout multiple years. I chose a line chart as it clearly and effectivly shows the trend of checkouts between the years 2017 and 2023.
@@ -60,7 +60,7 @@ This chart was made to compare George R. R. Martins "A Song of Ice and Fire" and
 
 ### Second Trends Over Time Chart
 
-```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart 2.R")}
+```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("../chart 2.R")}
 ```
 
 This chart goes into more detail about George R. R. Martin's "A Song of Ice and Fire"  series, presenting the amount of checkouts for each of the 5 titles in the series. This includes both audio and electronic books. 
@@ -73,7 +73,7 @@ This chart goes into more detail about George R. R. Martin's "A Song of Ice and 
 
 ### Your Choice
 
-```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart 3.R")}
+```{r, fig.length = 8, fig.width = 8, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("../chart 3.R")}
 ```
 
 This chart was a outside the realm of what I was doing topic wise for my other charts. This chart looks at the top checked out fantasy books for each year from 2017-2023. It includes ebooks, audiobooks and physical copies.
