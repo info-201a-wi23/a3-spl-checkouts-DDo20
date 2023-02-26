@@ -73,7 +73,7 @@ This chart goes into more detail about George R. R. Martin's "A Song of Ice and 
 
 ### Your Choice
 
-```{r, fig.length = 8, fig.width = 8, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("../chart 3.R")}
+```{r, fig.length = 15, fig.width = 15, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("../chart 3.R")}
 ```
 
 This chart was a outside the realm of what I was doing topic wise for my other charts. This chart looks at the top checked out fantasy books for each year from 2017-2023. It includes ebooks, audiobooks and physical copies.
