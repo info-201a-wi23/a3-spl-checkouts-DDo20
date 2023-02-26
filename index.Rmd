@@ -5,8 +5,7 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
-
+In this Assignment, I will be analyzing works from George R. R. Martin using the Seattle library checkout dataset. George R. R. Martin created a incredible series called "A Song of Ice and Fire" which later got turned into a TV show called "Game of Thrones" which I enjoyed very much (until the last couple of seasons where it went pretty downhill).
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
@@ -23,64 +22,66 @@ Feel free to calculate and report values that you find relevant.
 ### The Dataset
 
 - Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+  -Seattle Public Library has provided the data with their dataset
 
+- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+  -Paramaters include: UsageClass, CheckoutType, MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title, ISBN, Creator, Subjects, Publisher, and PublicationYear.
+
+- How was the data collected or generated?  
+
+- Why was the data collected?  
+  -In order to find a trend using the information given by the Seattle Library dataset. This could allow librarys to cater to titles that are receiving the most checkouts.
+
+- What, if any, ethical questions do you need to consider when working with this data?  
+  -I would say the main ethical questions I have would be if the number of checkouts was inflated?
+  -Or why some titles dont have a creator?
+
+- What are possible limitations or problems with this data?   (at least 200 words)
+  -I found the data to be very loose and scrambled all over, making it very hard to find certain books, creators, or genre's unless you had a specific person or book in mind.
+  -Very long titles on some books that make it difficult to display on a chart as the creator is sometimes also listed some titles.
+  -Possible restock or limited stock is not taken into consideration which could underepresent checkouts this can also apply to the renewal of books which could or could not be considered a checkout as its not specified.
+  -Library was possibly down or running at a lower capacity during the effective quarantine time during 2020 this could make checkouts rates go down or checkout rates could have been stopped completly if libraries were closed during quarantine.
+  -I found that there were multiple publishings for the same books/media and skewed the data when comparing different titles that may or maynot have multiple publishings. Like for the game of thrones tv series some of the seasons had multiple versions making the data more favorable towards a season if it was published multiple times.
+    -Also found that different versions of the same title was prevalent throughout the dataset, which brings an extra layer of how checkout data can be different as its possible for newer editions to come out in later years changing future checkouts.
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart1.R")}
+``` 
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+This chart was made to compare George R. R. Martins "A Song of Ice and Fire" and the TV adaptation "Game of Thrones" to understand the popularity between the two in terms of how often they are checked out throughout multiple years. I chose a line chart as it clearly and effectivly shows the trend of checkouts between the years 2017 and 2023.
 
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
+-The trends I noticed were:
+  -The "Game of Thrones" TV series had its peak at the very start of the graph with 4380 checkouts in 2018, and decreases each year.
+  -After the final season of "Game of Thrones" (2019) is when the Book series "A Song of Ice and Fire" hits its peak number of checkouts.
+  -As the number of check outs decrease for the TV series in 2021-2023 the book series gets a increase in checkouts in 2022 suddenly which could relate to possibly the spin off TV series that also released in 2022.
+  -Generally speaking both books and TV series gradually are decreasing going into 2023. 
 
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
-```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart2.R")}
 ```
+
+This chart goes into more detail about George R. R. Martin's "A Song of Ice and Fire"  series, presenting the amount of checkouts for each of the 5 titles in the series. This includes both audio and electronic books. 
+
+-The trends I noticed were:
+  -The first book "A game of thrones" was shown to easily be the most popular within the series, which would make sense since readers are most likely to read the first book within the series.
+  -The first book also recieved its most amount of checkouts during 2019 which is when the show ended. This could be due to people getting interested in reading the books of the show they just watched.
+  -The forth book "A feast for crows" was on average the least checked out book among the five. This might be due to it being as good of a read compared to the other books in the series.
+  -Genreally the four books after "A game of thrones" are seen to be very close to one another in number of checkouts throughout 2017-2023
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, message = FALSE, echo = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart3.R")}
 ```
+
+This chart was a outside the realm of what I was doing topic wise for my other charts. This chart looks at the top checked out fantasy books for each year from 2017-2023. It includes ebooks, audiobooks and physical copies.
+
+-The trends I noticed:
+  -How 2018's most popular fantasy title had the most checkouts between 2017-2023 with 4408 checkouts.
+  -2021 and 2022 shared the same title for most checkouts for the fantasy genre.
+  -2019 and 2020 share pretty similar number of checkouts for each year which is also seen with 2021 and 2022
+  -Recent years seen to have higher number of checkouts excluding 2023.
 
 
